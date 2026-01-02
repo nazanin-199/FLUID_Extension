@@ -1,6 +1,7 @@
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score
 import torch
+import rdflib
 from torch_geometric.data import Data
 from typing import Tuple, Dict
 from config.config import GNNConfig, IFLUIDConfig
