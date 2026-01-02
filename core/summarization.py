@@ -2,7 +2,7 @@ from typing import Dict, List, Tuple, Set, FrozenSet
 from collections import defaultdict
 import rdflib
 from rdflib import RDF
-
+from utils.logger import IFLUIDLogger
 
 class FLUIDSummarizer:
     """FLUID graph summarization."""
