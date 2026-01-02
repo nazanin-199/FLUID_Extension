@@ -1,4 +1,4 @@
-from ifluid.models.gnn import (
+from models.gnn import (
     SummaryGCN,
     PyGGraphBuilder,
     LabelBuilder,
