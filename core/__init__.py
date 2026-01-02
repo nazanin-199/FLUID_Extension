@@ -1,7 +1,7 @@
-from ifluid.core.statistics import KGStatistics
-from ifluid.core.extraction import AdaptivePolicy, SymbolicExtractor
-from ifluid.core.summarization import FLUIDSummarizer
-from ifluid.core.embeddings import (
+from core.statistics import KGStatistics
+from core.extraction import AdaptivePolicy, SymbolicExtractor
+from core.summarization import FLUIDSummarizer
+from core.embeddings import (
     InferenceEmbedder,
     EmbeddingTrainer,
     PayloadBuilder,
