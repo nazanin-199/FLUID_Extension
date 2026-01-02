@@ -1,5 +1,5 @@
 from config.config import PolicyConfig
-from typing import Dict
+from typing import Dict, Any
 from collections import defaultdict
 import rdflib
 from rdflib import RDF, RDFS, OWL
