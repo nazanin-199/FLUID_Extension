@@ -1,4 +1,12 @@
+import rdflib
+from typing import Dict
+from core.statistics import KGStatistics
+from core.extraction import AdaptivePolicy, SymbolicExtractor
+from core.summarization import FLUIDSummarizer
+from core.embeddings import EmbeddingTrainer, PayloadBuilder
+from utils.logger import IFLUIDLogger
 from config.config import IFLUIDConfig
+
 class IFLUIDPipeline:
     """Main IFLUID pipeline orchestrator."""
     
