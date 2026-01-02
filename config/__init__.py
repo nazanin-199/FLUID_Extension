@@ -1,4 +1,4 @@
-from ifluid.config.config import (
+from .config import (
     IFLUIDConfig,
     EmbeddingConfig,
     GNNConfig,
