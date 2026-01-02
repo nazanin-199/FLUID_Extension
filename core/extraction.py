@@ -1,3 +1,4 @@
+from config.config import PolicyConfig
 from typing import Dict
 from collections import defaultdict
 import rdflib
