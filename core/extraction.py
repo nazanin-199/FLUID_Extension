@@ -3,7 +3,7 @@ from typing import Dict, Any
 from collections import defaultdict
 import rdflib
 from rdflib import RDF, RDFS, OWL
-
+from utils.logger import IFLUIDLogger
 
 class AdaptivePolicy:
     """Determine extraction policy based on KG profile."""
