@@ -1,6 +1,6 @@
 """Evaluation and benchmarking utilities."""
 
-from ifluid.evaluation.benchmark import (
+from evaluation.benchmark import (
     GNNEvaluator,
     LUBMBenchmark,
 )
