@@ -3,6 +3,8 @@ from sklearn.metrics import accuracy_score, f1_score
 import torch
 from torch_geometric.data import Data
 from typing import Tuple, Dict
+from config.config import GNNConfig, IFLUIDConfig
+from utils.logger import IFLUIDLogger
 
 
 class GNNEvaluator:
