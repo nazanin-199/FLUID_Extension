@@ -1,3 +1,5 @@
+from config.config import EmbeddingConfig
+from utils.logger import IFLUIDLogger
 import torch
 import torch.nn as nn
 from typing import List, Tuple, Dict, Optional
