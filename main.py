@@ -1,3 +1,4 @@
+from config.config import IFLUIDConfig
 class IFLUIDPipeline:
     """Main IFLUID pipeline orchestrator."""
     
