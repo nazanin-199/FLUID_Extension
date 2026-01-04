@@ -10,6 +10,7 @@ from utils.logger import IFLUIDLogger
 from utils.validators import Validators
 from main import IFLUIDPipeline
 from models.gnn import PyGGraphBuilder
+from models.gnn import SummaryGCN
 
 
 class GNNEvaluator:
