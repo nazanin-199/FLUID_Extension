@@ -9,6 +9,7 @@ from config.config import GNNConfig, IFLUIDConfig
 from utils.logger import IFLUIDLogger
 from utils.validators import Validators
 from main import IFLUIDPipeline
+from models.gnn import PyGGraphBuilder
 
 
 class GNNEvaluator:
