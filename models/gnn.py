@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from torch_geometric.data import Data
 from torch_geometric.nn import GCNConv
-from typing import Dict, Optional
+from typing import List, Dict, Optional
 from collections import Counter
 import rdflib
 from rdflib import RDF
