@@ -4,6 +4,7 @@ import torch
 import rdflib
 from torch_geometric.data import Data
 from typing import Tuple, Dict
+from models.gnn import LabelBuilder
 from config.config import GNNConfig, IFLUIDConfig
 from utils.logger import IFLUIDLogger
 from utils.validators import Validators
