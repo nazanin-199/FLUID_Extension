@@ -1,9 +1,9 @@
 import pytest
 import rdflib
-from ifluid.main import IFLUIDPipeline
-from ifluid.config.config import IFLUIDConfig, EmbeddingConfig, GNNConfig
-from ifluid.evaluation.benchmark import GNNEvaluator
-from ifluid.models.gnn import PyGGraphBuilder, LabelBuilder
+from main import IFLUIDPipeline
+from config.config import IFLUIDConfig, EmbeddingConfig, GNNConfig
+from evaluation.benchmark import GNNEvaluator
+from models.gnn import PyGGraphBuilder, LabelBuilder
 
 
 def test_full_pipeline_basic(hierarchical_graph):
