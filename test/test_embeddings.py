@@ -1,12 +1,11 @@
 import pytest
 import torch
-import rdflib
 from core.embeddings import (
     InferenceEmbedder,
     EmbeddingTrainer,
     PayloadBuilder
 )
-from config.config import EmbeddingConfig
+from ifluid.config.config import EmbeddingConfig
 
 
 def test_embedder_initialization():
