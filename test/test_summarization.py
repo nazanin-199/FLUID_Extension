@@ -1,7 +1,6 @@
 import pytest
 from core.summarization import FLUIDSummarizer
 
-
 def test_basic_summarization(simple_graph):
     """Test basic FLUID summarization."""
     summarizer = FLUIDSummarizer()
