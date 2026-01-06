@@ -1,5 +1,6 @@
 import pytest
 import torch
+import rdflib
 from core.embeddings import (
     InferenceEmbedder,
     EmbeddingTrainer,
