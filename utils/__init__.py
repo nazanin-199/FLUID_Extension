@@ -1,6 +1,6 @@
-from ifluid.utils.logger import IFLUIDLogger
-from ifluid.utils.validators import Validators, ValidationError
-from ifluid.utils.graph_utils import GraphUtils
+from utils.logger import IFLUIDLogger
+from utils.validators import Validators, ValidationError
+from utils.graph_utils import GraphUtils
 
 __all__ = [
     'IFLUIDLogger',
