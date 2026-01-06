@@ -1,5 +1,6 @@
 import pytest
 import rdflib
+from rdflib import RDF, RDFS 
 from main import IFLUIDPipeline
 from config.config import IFLUIDConfig, EmbeddingConfig, GNNConfig
 from evaluation.benchmark import GNNEvaluator
