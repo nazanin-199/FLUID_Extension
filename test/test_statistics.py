@@ -1,4 +1,3 @@
-
 import pytest
 from ifluid.core.statistics_streamlined import StreamlinedKGStatistics
 
