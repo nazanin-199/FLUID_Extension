@@ -1,9 +1,9 @@
 """Tests for symbolic extraction."""
 
 import pytest
-from ifluid.core.extraction import AdaptivePolicy, SymbolicExtractor
-from ifluid.core.statistics import KGStatistics
-from ifluid.config.config import PolicyConfig
+from core.extraction import AdaptivePolicy, SymbolicExtractor
+from core.statistics import KGStatistics
+from config.config import PolicyConfig
 
 
 def test_adaptive_policy(simple_graph):
