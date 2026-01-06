@@ -1,5 +1,5 @@
 import pytest
-from ifluid.core.summarization import FLUIDSummarizer
+from core.summarization import FLUIDSummarizer
 
 
 def test_basic_summarization(simple_graph):
