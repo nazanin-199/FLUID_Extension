@@ -1,5 +1,5 @@
 import pytest
-from ifluid.core.statistics_streamlined import StreamlinedKGStatistics
+from core.statistics_streamlined import StreamlinedKGStatistics
 
 
 def test_basic_counts(simple_graph):
