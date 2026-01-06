@@ -1,11 +1,11 @@
 import pytest
 import torch
-from ifluid.core.embeddings import (
+from core.embeddings import (
     InferenceEmbedder,
     EmbeddingTrainer,
     PayloadBuilder
 )
-from ifluid.config.config import EmbeddingConfig
+from config.config import EmbeddingConfig
 
 
 def test_embedder_initialization():
