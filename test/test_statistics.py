@@ -1,7 +1,7 @@
 import unittest
 import rdflib
 from rdflib import RDF, RDFS
-from ifluid.core.statistics import KGStatistics
+from core.statistics import KGStatistics
 
 class TestKGStatistics(unittest.TestCase):
     def setUp(self):
