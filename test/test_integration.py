@@ -6,7 +6,6 @@ from config.config import IFLUIDConfig, EmbeddingConfig, GNNConfig
 from evaluation.benchmark import GNNEvaluator
 from models.gnn import PyGGraphBuilder, LabelBuilder
 
-
 def test_full_pipeline_basic(hierarchical_graph):
     """Test complete pipeline on hierarchical graph."""
     config = IFLUIDConfig(
