@@ -1,6 +1,6 @@
 import argparse
 from pathlib import Path
-from experiments.configs.ablation_configs import AblationConfigGenerator
+from experiments.ablation_configs.py import AblationConfigGenerator
 from experiments.runners.experiment_runner import ExperimentRunner
 
 
