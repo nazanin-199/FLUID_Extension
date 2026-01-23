@@ -2,11 +2,10 @@ import torch
 import torch.nn as nn
 from typing import List, Tuple, Dict, Optional
 import random
-from experiments.configs.ablation_configs import EmbeddingType
+from experiments.ablation_configs import EmbeddingType
 
 
 class BaseEmbeddingModel(nn.Module):
-    """Base class for embedding models."""
     
     def __init__(self, n_entities: int, n_relations: int, dim: int):
         super().__init__()
@@ -21,10 +20,7 @@ class BaseEmbeddingModel(nn.Module):
     def forward(self, heads: torch.Tensor, relations: torch.Tensor, tails: torch.Tensor) -> torch.Tensor:
         return self.score(heads, relations, tails)
 
-
-class TransEModel(BaseEmbeddingModel):
-    """TransE: Translating Embeddings (current baseline)."""
-    
+class TransEModel(BaseEmbeddingModel):  
     def __init__(self, n_entities: int, n_relations: int, dim: int = 32):
         super().__init__(n_entities, n_relations, dim)
         self.entity_embeddings = nn.Embedding(n_entities, dim)
@@ -100,7 +96,6 @@ class ComplExModel(BaseEmbeddingModel):
         
         return -score  # Negate for consistency
 
-
 class RandomEmbeddingModel(BaseEmbeddingModel):
     """Random embeddings (sanity check)."""
     
@@ -114,7 +109,7 @@ class RandomEmbeddingModel(BaseEmbeddingModel):
         nn.init.normal_(self.relation_embeddings.weight.data, mean=0, std=0.1)
     
     def score(self, heads: torch.Tensor, relations: torch.Tensor, tails: torch.Tensor) -> torch.Tensor:
-        """Random scoring (just for consistency)."""
+        """Random scoring (for consistency)."""
         h = self.entity_embeddings(heads)
         r = self.relation_embeddings(relations)
         t = self.entity_embeddings(tails)
@@ -123,7 +118,6 @@ class RandomEmbeddingModel(BaseEmbeddingModel):
 
 class EmbeddingTrainerAblation:
     """Unified trainer for different embedding models."""
-    
     def __init__(self, embedding_type: EmbeddingType, config: Dict):
         self.embedding_type = embedding_type
         self.config = config
@@ -279,7 +273,6 @@ class EmbeddingTrainerAblation:
         )
         
         return pos, neg
-
 
 class PayloadBuilderAblation:
     """Build payload with different embedding types."""
