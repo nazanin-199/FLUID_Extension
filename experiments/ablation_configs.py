@@ -33,7 +33,6 @@ class TopologyType(Enum):
 
 @dataclass
 class PolicyConfig:
-    """Policy configuration for ablation."""
     policy_type: PolicyType
     subClassOf: Optional[bool] = None
     subPropertyOf: Optional[bool] = None
@@ -60,7 +59,7 @@ class PolicyConfig:
             return cls(
                 policy_type=policy_type,
                 adaptive=True,
-                sameAs=False,  # Force disable
+                sameAs=False,  
                 subClassOf=None,
                 subPropertyOf=None,
                 domain_range=None,
@@ -71,7 +70,7 @@ class PolicyConfig:
             return cls(
                 policy_type=policy_type,
                 adaptive=True,
-                domain_range=False,  # Force disable
+                domain_range=False,  
                 subClassOf=None,
                 subPropertyOf=None,
                 sameAs=None,
@@ -118,7 +117,6 @@ class PolicyConfig:
 
 @dataclass
 class EmbeddingConfig:
-    """Embedding configuration for ablation."""
     embedding_type: EmbeddingType
     dim: int = 32
     epochs: int = 40
@@ -143,7 +141,6 @@ class EmbeddingConfig:
 
 @dataclass
 class TopologyConfig:
-    """Topology configuration for ablation."""
     topology_type: TopologyType
     community_weight: float = 1.0
     hub_weight: float = 1.0
@@ -274,9 +271,7 @@ class ExperimentConfig:
         )
 
 
-class AblationConfigGenerator:
-    """Generate experiment configurations for ablation studies."""
-    
+class AblationConfigGenerator:    
     @staticmethod
     def generate_policy_ablation(
         dataset_name: str,
