@@ -49,7 +49,6 @@ class ResultsAnalyzer:
     # ========================================================================
     
     def analyze_policy_ablation(self) -> Dict:
-        """Analyze policy ablation results."""
         print("\n" + "="*80)
         print("ABLATION A: POLICY ANALYSIS")
         print("="*80)
@@ -101,7 +100,6 @@ class ResultsAnalyzer:
     # ========================================================================
     
     def analyze_embedding_ablation(self) -> Dict:
-        """Analyze embedding ablation results."""
         print("\n" + "="*80)
         print("ABLATION B: EMBEDDING ANALYSIS")
         print("="*80)
@@ -147,7 +145,6 @@ class ResultsAnalyzer:
     # ========================================================================
     
     def analyze_topology_ablation(self) -> Dict:
-        """Analyze topology ablation results."""
         print("\n" + "="*80)
         print("ABLATION C: TOPOLOGY ANALYSIS (Publication-Ready)")
         print("="*80)
@@ -192,7 +189,6 @@ class ResultsAnalyzer:
     # ========================================================================
     
     def create_visualizations(self, output_dir: str = "visualizations"):
-        """Create all visualizations."""
         output_path = Path(output_dir)
         output_path.mkdir(exist_ok=True)
         
@@ -217,7 +213,6 @@ class ResultsAnalyzer:
         print(f"\nVisualizations saved to {output_path}")
     
     def _plot_policy_comparison(self, output_path: Path):
-        """Plot policy ablation comparison."""
         policy_df = self.df[
             (self.df['embedding_type'] == 'transe') &
             (self.df['topology_type'] == 'raw')
@@ -256,7 +251,6 @@ class ResultsAnalyzer:
         plt.close()
     
     def _plot_embedding_comparison(self, output_path: Path):
-        """Plot embedding ablation comparison."""
         embedding_df = self.df[
             (self.df['policy_type'] == 'full_adaptive') &
             (self.df['topology_type'] == 'raw')
@@ -286,7 +280,6 @@ class ResultsAnalyzer:
         plt.close()
     
     def _plot_topology_comparison(self, output_path: Path):
-        """Plot topology ablation comparison."""
         topology_df = self.df[
             (self.df['policy_type'] == 'full_adaptive') &
             (self.df['embedding_type'] == 'transe')
@@ -319,7 +312,6 @@ class ResultsAnalyzer:
         plt.close()
     
     def _plot_comprehensive(self, output_path: Path):
-        """Create comprehensive comparison plot."""
         fig, axes = plt.subplots(2, 2, figsize=(16, 12))
         
         # Top-left: Policy
@@ -367,7 +359,6 @@ class ResultsAnalyzer:
         plt.close()
     
     def export_latex_table(self, output_path: str = "results/ablation_table.tex"):
-        """Export publication-ready LaTeX table."""
         if len(self.df) == 0:
             return
         
