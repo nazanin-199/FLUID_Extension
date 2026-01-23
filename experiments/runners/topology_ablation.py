@@ -4,7 +4,7 @@ import networkx as nx
 from typing import Dict, List, Set, Optional
 from collections import defaultdict
 import numpy as np
-from experiments.configs.ablation_configs import TopologyType
+from experiments.ablation_configs import TopologyType
 
 
 class TopologyAnalyzer:
