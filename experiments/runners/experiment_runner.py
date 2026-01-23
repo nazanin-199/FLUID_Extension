@@ -8,13 +8,13 @@ import torch
 import numpy as np
 import rdflib
 
-from experiments.configs.ablation_configs import (
+from experiments.ablation_configs import (
     ExperimentConfig, 
     EmbeddingType,
     PolicyType,
     TopologyType
 )
-from experiments.models.embeddings_ablation import (
+from experiments.embeddings_ablation import (
     EmbeddingTrainerAblation,
     PayloadBuilderAblation
 )
