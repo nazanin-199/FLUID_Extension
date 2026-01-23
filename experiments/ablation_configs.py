@@ -1,9 +1,3 @@
-"""
-experiments/configs/ablation_configs.py
-
-Centralized configuration for all ablation studies.
-"""
-
 from dataclasses import dataclass, asdict
 from typing import Dict, Any, Optional, List
 from enum import Enum
