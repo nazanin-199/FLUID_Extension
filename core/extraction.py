@@ -9,7 +9,6 @@ from dataclasses import dataclass
 
 @dataclass
 class PolicyDecision:
-    """Policy decision with clear reasoning."""
     enabled: bool
     reason: str
     cost_estimate: int = 0
@@ -59,7 +58,7 @@ class AdaptivePolicy:
         reasoning['subClassOf'] = self._decide_subclass(profile, stats)
         policy['subClassOf'] = reasoning['subClassOf'].enabled
         
-        # === SubPropertyOf (always safe) ===
+        # === SubPropertyOf ===
         policy['subPropertyOf'] = True
         reasoning['subPropertyOf'] = PolicyDecision(
             enabled=True,
