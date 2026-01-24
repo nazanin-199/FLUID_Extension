@@ -19,7 +19,7 @@ class KGStatistics:
     - Branching factor for hierarchy shape
     """
     
-   def __init__(self, graph: rdflib.Graph):
+    def __init__(self, graph: rdflib.Graph):
         self.graph = graph
         self._cache = {}
         
