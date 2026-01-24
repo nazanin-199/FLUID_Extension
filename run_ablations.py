@@ -5,7 +5,6 @@ from experiments.runners.experiment_runner import ExperimentRunner
 
 
 def run_policy_ablation(dataset_path: str, dataset_name: str, output_dir: str):
-    """Run Policy Ablation (A)."""
     print("\n" + "="*80)
     print("STARTING POLICY ABLATION (A)")
     print("="*80)
@@ -30,7 +29,6 @@ def run_policy_ablation(dataset_path: str, dataset_name: str, output_dir: str):
 
 
 def run_embedding_ablation(dataset_path: str, dataset_name: str, output_dir: str):
-    """Run Embedding Ablation (B)."""
     print("\n" + "="*80)
     print("STARTING EMBEDDING ABLATION (B)")
     print("="*80)
@@ -55,7 +53,6 @@ def run_embedding_ablation(dataset_path: str, dataset_name: str, output_dir: str
 
 
 def run_topology_ablation(dataset_path: str, dataset_name: str, output_dir: str):
-    """Run Topology Ablation (C)."""
     print("\n" + "="*80)
     print("STARTING TOPOLOGY ABLATION (C) - Publication-Ready")
     print("="*80)
@@ -80,7 +77,6 @@ def run_topology_ablation(dataset_path: str, dataset_name: str, output_dir: str)
 
 
 def run_all_ablations(dataset_path: str, dataset_name: str, output_dir: str):
-    """Run all three ablation studies."""
     print("\n" + "="*80)
     print("RUNNING COMPLETE ABLATION STUDY")
     print("="*80)
@@ -129,51 +125,7 @@ def main():
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
         description="IFLUID Ablation Study Runner",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  # Run all three ablations on a dataset
-  python run_ablations.py --mode all --dataset data/lubm.rdf --name LUBM
-  
-  # Run only policy ablation
-  python run_ablations.py --mode policy --dataset data/lubm.rdf --name LUBM
-  
-  # Run only embedding ablation
-  python run_ablations.py --mode embedding --dataset data/lubm.rdf --name LUBM
-  
-  # Run only topology ablation (publication-ready)
-  python run_ablations.py --mode topology --dataset data/lubm.rdf --name LUBM
-  
-  # Run from custom config file
-  python run_ablations.py --mode custom --config experiments/configs/my_configs.json
-  
-  # Analyze results
-  python experiments/analyze_results.py --results-dir results --output-dir visualizations
-
-Ablation Studies:
-  A. Policy Ablation (6 variants × 3 runs = 18 experiments)
-     - full_adaptive: Adaptive policy based on graph statistics
-     - no_sameas: Disabling entity consolidation
-     - no_domain_range: Only taxonomic inference
-     - taxonomy_only: SubClassOf and SubPropertyOf only
-     - fixed_policy: All rules enabled without adaptivity
-     - random_policy: Random rule assignment (sanity check)
-  
-  B. Embedding Ablation (5 variants × 3 runs = 15 experiments)
-     - transe: Translating embeddings (current baseline)
-     - distmult: Bilinear model (symmetric relations)
-     - complex: Complex embeddings (asymmetric relations)
-     - random: Random embeddings (sanity check)
-     - none: No embeddings (FLUID baseline)
-  
-  C. Topology Ablation (4 variants × 3 runs = 12 experiments)
-     - raw: No topology-aware weighting
-     - community_aware: Emphasize modular structure
-     - hub_weighted: Emphasize scale-free property
-     - hierarchy_weighted: Emphasize deep hierarchical structure
-
-Total: 45 experiments for complete ablation study
-        """
+        formatter_class=argparse.RawDescriptionHelpFormatter
     )
     
     parser.add_argument(
